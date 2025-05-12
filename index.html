@@ -6,8 +6,37 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tagesschrift&display=swap" rel="stylesheet">
 <body>
-    
+    <div class="container">
+        <h1>Consulta de Países</h1>
+        
+        <div class="search-container">
+            <input type="text" id="country-input" placeholder="Digite o nome de um país...">
+            <button id="search-btn">Buscar</button>
+            <button id="random-btn">Aleatório</button>
+        </div>
+        
+        <div id="country-info" class="country-card hidden">
+            <div class="flag-container">
+                <img id="country-flag" src="" alt="Bandeira">
+            </div>
+            <h2 id="country-name"></h2>
+            <div class="details">
+                <p><strong>Capital:</strong> <span id="country-capital"></span></p>
+                <p><strong>População:</strong> <span id="country-population"></span></p>
+                <p><strong>Região:</strong> <span id="country-region"></span></p>
+                <p><strong>Idioma(s):</strong> <span id="country-languages"></span></p>
+                <p><strong>Moeda(s):</strong> <span id="country-currencies"></span></p>
+            </div>
+        </div>
+        
+        <div id="error-message" class="hidden">
+            País não encontrado.
+        </div>
+    </div>
 </body>
-<script src="./script.js"></script>
+<script src="./api.js"></script>
 </html>
